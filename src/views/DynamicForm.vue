@@ -1,4 +1,5 @@
 <template>
+  <button type="button" class="btn btn-info my-1 mx-1 text-white" @click="() => $router.push('/listing')">Visit to User Listing</button>
   <div class="container">
     <h1 class="text-center my-5">Dynamic Form</h1>
     <!-- Form can handle number of fields -->

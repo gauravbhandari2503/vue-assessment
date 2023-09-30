@@ -1,4 +1,5 @@
 <template>
+  <button type="button" class="btn btn-info my-1 mx-1 text-white" @click="() => $router.push('/')">Visit to Dynamic Form</button>
   <vue-element-loading :active="isLoading" is-full-screen />
   <div class="container listing" v-if="!isLoading">
     <h1 class="list-heading my-4">User Listing</h1>
