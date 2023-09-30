@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* ########################## utility classes #################### */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto
+}
+
+label {
+  color: rgb(106, 102, 102) !important;
+}
