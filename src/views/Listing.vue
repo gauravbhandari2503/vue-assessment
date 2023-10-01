@@ -12,7 +12,7 @@
       </select>
       <input class="form-control" type="text" :placeholder="searchByPlaceholder()" v-model="searchQuery" @input="debounceSearch" />
     </div>
-    <div class="list-table">
+    <div class="list-table table-responsive">
       <table class="table table-hover table-striped">
         <thead>
           <tr>
