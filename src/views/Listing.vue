@@ -46,7 +46,7 @@
           </template>
         </tbody>
       </table>
-      <Pagination
+      <Pagination 
         v-if="filteredUsers.length"
         :perPage="5"
         :totalRows="totalRecords"
