@@ -60,7 +60,7 @@
 <script>
 // Using options API
 import { ref, onMounted } from 'vue'
-import { useStore } from 'vuex'
+import { useStore, mapGetters, mapState } from 'vuex'
 import Pagination from '../components/PaginationComponent.vue'
 import { debounce } from 'lodash'
 
@@ -97,18 +97,14 @@ export default {
     Pagination
   },
   computed: {
-    filteredUsers() {
-      return this.store.getters['users/getPaginatedData']
-    },
-    pageNumber() {
-      return this.store.state.users.pagination.currentPage
-    },
-    totalRecords() {
-      return this.store.getters['users/getTotalRecords']
-    },
-    categories() {
-      return this.store.getters['users/getSearchByCategories']
-    }
+    ...mapGetters({
+      filteredUsers: 'users/getPaginatedData',
+      totalRecords: 'users/getTotalRecords',
+      categories: 'users/getSearchByCategories',
+    }),
+    ...mapState({
+      pageNumber: (state) => state.users.pagination.currentPage
+    })
   },
   methods: {
     changePage(pageNumber) {
