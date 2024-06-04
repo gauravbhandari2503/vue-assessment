@@ -57,11 +57,11 @@ function getFormInitials() {
   return obj
 }
 const dynamicForm = response.blocks
-let requestForm = ref(getFormInitials())
-let formErrors = ref(new FormErrors())
+const requestForm = ref(getFormInitials())
+const formErrors = ref(new FormErrors())
 
 function validateForm() {
-  let validated = true
+  var validated = true
   dynamicForm.forEach((form) => {
     if (
       form.props.hasOwnProperty('required') &&
